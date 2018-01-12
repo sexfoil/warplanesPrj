@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+
+
+    <bean name="/cart.sly" class="javaweb.project.poliakov.slava.controllers.CartController"/>
+    <bean name="/contacts.sly" class="javaweb.project.poliakov.slava.controllers.ContactsController"/>
+    <bean name="/login.sly" class="javaweb.project.poliakov.slava.controllers.LoginController"/>
+    <bean name="/products.sly" class="javaweb.project.poliakov.slava.controllers.ProductController"/>
+    <bean name="/register.sly" class="javaweb.project.poliakov.slava.controllers.RegisterController"/>
+
+    <!-- TO DO
+
+    <bean name="/loginpage.sly" class="projectSMVC.LoginController"/>
+
+    -->
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+</beans>
